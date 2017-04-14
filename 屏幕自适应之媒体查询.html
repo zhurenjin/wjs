@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+    /*媒体查询时。一定要按照min-width的从小到大的顺序去进行排列 ，原因是css解释中有覆盖的作用，从上往下执行。判断条件也可以是max-width，但是要倒过来写啦！！*/
+    .div {
+        height: 800px;
+
+    }
+    @media (min-width: 768px ) {
+        .div {
+            width: 750px;
+        }
+    }
+
+    @media (min-width: 992px ) {
+        .div {
+            width: 970px;
+        }
+    }
+    @media (min-width: 1220px ) {
+        .div {
+            width: 1170px;
+        }
+    @media (min-width: 1220px ) and(max-width: 1230px) {
+        .div {
+            width: 1170px;
+        }
+
+    /*也可以说的判断条件是有2个值的！！*/
+</style>
+<body>
+<div class="div"></div>
+<div class="container">
+    <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+
+
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            国籍
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">中国</a></li>
+            <li><a href="#">美国</a></li>
+            <li><a href="#">日本</a></li>
+            <li><a href="#">加拿大</a></li>
+            <li><a href="#">韩国</a></li>
+            <li role="separator" class="divider"></li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+</body>
+</html>
